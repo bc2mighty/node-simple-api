@@ -9,9 +9,8 @@ const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 
 //Make Changes here to connect it to the real database on Mongo Atlas
-mongoose.connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true
-})
+const mongoose = require("mongoose")
+mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false})
 
 const db = mongoose.connection;
 
